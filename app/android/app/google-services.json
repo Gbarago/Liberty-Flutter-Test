@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "660667237895",
+    "project_id": "liberty-test-70857",
+    "storage_bucket": "liberty-test-70857.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660667237895:android:f7606c4000cec030288ca2",
+        "android_client_info": {
+          "package_name": "com.libertytest.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "660667237895-9qeoopr412cvf883rk09jfk4dg63roji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGU0QGOppt8UYuNg1AxAdXeJyN8eDyVBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "660667237895-9qeoopr412cvf883rk09jfk4dg63roji.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

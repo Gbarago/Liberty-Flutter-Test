@@ -106,3 +106,30 @@ fingerPrint(BuildContext context) {
     ),
   );
 }
+
+textButton(BuildContext context, Function()? onTap, String? title,
+    double? height, double? width) {
+  var h = MediaQuery.of(context).size.height;
+  var w = MediaQuery.of(context).size.width;
+  return InkWell(
+    onTap: onTap,
+    child: Container(
+        width: width,
+        height: height,
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: AppColors.cardDeepBlue,
+          ),
+          borderRadius: BorderRadius.circular(3.0),
+        ),
+        child: Center(
+          child: Text(
+            title as String,
+            style: const TextStyle(
+              fontSize: 10,
+              color: AppColors.cardDeepBlue,
+            ),
+          ),
+        )),
+  );
+}

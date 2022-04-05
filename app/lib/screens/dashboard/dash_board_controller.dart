@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class DashBoardScreenController extends GetxController {
@@ -6,22 +5,10 @@ class DashBoardScreenController extends GetxController {
 
   void onItemTapped(int index) {
     selectedIndex.value = index;
+    print('=====xxx selected index is $index');
     update();
   }
 
   //New
-  static const List<Widget> pages = <Widget>[
-    Icon(
-      Icons.call,
-      size: 150,
-    ),
-    Icon(
-      Icons.camera,
-      size: 150,
-    ),
-    Icon(
-      Icons.chat,
-      size: 150,
-    ),
-  ];
+
 }

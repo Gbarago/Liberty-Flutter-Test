@@ -25,7 +25,12 @@ dev_dependencies:
   form_builder_validators: ^7.8.0
   intl_phone_field: ^3.1.0
   percent_indicator: ^4.0.0
-
+  firebase_core: ^1.14.0
+  firebase_auth: ^3.3.4
+  equatable: ^2.0.3
+  flutter_bloc: ^8.0.1
+  google_sign_in: ^5.2.1
+  email_validator: ^2.0.1
 
 flutter:
   uses-material-design: true
