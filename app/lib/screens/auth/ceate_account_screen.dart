@@ -1,12 +1,13 @@
 import 'package:app/bloc/auth_bloc.dart';
+import 'package:app/screens/auth/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
 
 import '../../utils/colors.dart';
 import '../../widgets/buttons.dart';
-import '../dashboard/dash_board_scree.dart';
 
 class CreateAccoubtScreen extends StatefulWidget {
   const CreateAccoubtScreen({Key? key}) : super(key: key);
@@ -31,13 +32,6 @@ class _CreateAccoubtScreen extends State<CreateAccoubtScreen> {
     }
   }
 
-//
-  void _authenticateWithGoogle(context) {
-    BlocProvider.of<AuthBloc>(context).add(
-      GoogleSignInRequested(),
-    );
-  }
-
   final _formKey = GlobalKey<FormBuilderState>();
   bool showObscureText = false;
 
@@ -57,10 +51,9 @@ class _CreateAccoubtScreen extends State<CreateAccoubtScreen> {
         listener: (context, state) {
           if (state is Authenticated) {
             // Navigating to the dashboard screen if the user is authenticated
-            Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const DashBoardScreen()));
+            ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('Account Created Succefully')));
+            Get.offAll(const LoginScreen());
           }
           if (state is AuthError) {
             // Showing the error message if the user has entered invalid credentials
